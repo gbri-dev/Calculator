@@ -34,8 +34,10 @@ namespace Calculator
                     Divisao();
                     break;
                 default:
-                    Console.WriteLine("Digite um caractere válido. + - * /");
-                    break;
+                    {
+                        Menu();
+                        break;
+                    }
             }
         }
         static void Soma()
@@ -57,7 +59,17 @@ namespace Calculator
             //Console.WriteLine("O Meu Resultado é: " + (v1 + v2));
             //Por último
             Console.WriteLine($"O Meu Resultado é: {v1 + v2}");
-            Console.ReadKey();
+            System.Console.WriteLine("---------");
+            System.Console.WriteLine("Deseja fazer outra operação? S/N");
+            char repeticao = Convert.ToChar(Console.ReadLine());
+            if (repeticao == 's' || repeticao == 'S')
+                Menu();
+            else
+            {
+                System.Console.WriteLine("Tchau!!");
+                Console.ReadKey();
+            }
+
         }
         static void Subtracao()
         {
@@ -67,7 +79,13 @@ namespace Calculator
             System.Console.WriteLine("Digite o segundo número: ");
             float v2 = float.Parse(Console.ReadLine());
             Console.WriteLine($"O Resultado da subtração é : {v1 - v2}");
-            Console.ReadKey();
+            System.Console.WriteLine("---------");
+            System.Console.WriteLine("Deseja fazer outra operação? Y/F");
+            char repeticao = Convert.ToChar(Console.ReadLine());
+            if (repeticao == 's' || repeticao == 'S')
+                Menu();
+            else
+                Console.ReadKey();
         }
 
         static void Divisao()
@@ -78,7 +96,13 @@ namespace Calculator
             Console.WriteLine("Digite o segundo número: ");
             float v2 = float.Parse(Console.ReadLine());
             System.Console.WriteLine($"O resultado da divisão é: {v1 / v2}");
-            Console.ReadKey();
+            System.Console.WriteLine("---------");
+            System.Console.WriteLine("Deseja fazer outra operação? Y/F");
+            char repeticao = Convert.ToChar(Console.ReadLine());
+            if (repeticao == 's' || repeticao == 'S')
+                Menu();
+            else
+                Console.ReadKey();
         }
         static void Multiplicacao()
         {
@@ -88,7 +112,13 @@ namespace Calculator
             System.Console.WriteLine("Digite o segundo número: ");
             float v2 = float.Parse(Console.ReadLine());
             System.Console.WriteLine($"O resultado da multiplicação é: {v1 * v2}");
-            Console.ReadKey();
+            System.Console.WriteLine("---------");
+            System.Console.WriteLine("Deseja fazer outra operação? Y/F");
+            char repeticao = Convert.ToChar(Console.ReadLine());
+            if (repeticao == 's' || repeticao == 'S')
+                Menu();
+            else
+                Console.ReadKey();
         }
     }
 
