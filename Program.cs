@@ -17,7 +17,7 @@ namespace Calculator
                 Console.Write("*");
             }
             System.Console.WriteLine("BEM VINDO!");
-            Console.WriteLine("Qual Operação matematica você deseja? ");
+            Console.WriteLine("Qual Operação matematica você deseja? #obs: n para sair.");
             char operacao = Convert.ToChar(Console.ReadLine());
             switch (operacao)
             {
@@ -32,6 +32,9 @@ namespace Calculator
                     break;
                 case '/':
                     Divisao();
+                    break;
+                case 'n':
+                    System.Environment.Exit(0);
                     break;
                 default:
                     {
