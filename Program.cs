@@ -71,6 +71,7 @@ namespace Calculator
             {
                 System.Console.WriteLine("Tchau!!");
                 Console.ReadKey();
+                System.Environment.Exit(0);
             }
 
         }
