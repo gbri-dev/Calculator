@@ -18,7 +18,7 @@ namespace Calculator
             }
             System.Console.WriteLine("BEM VINDO!");
             Console.WriteLine("Qual Operação matematica você deseja? #obs: n para sair.");
-            char operacao = Convert.ToChar(Console.ReadLine());
+            char operacao = Convert.ToChar(Console.ReadLine().ToLower());
             switch (operacao)
             {
                 case '+':
@@ -64,8 +64,8 @@ namespace Calculator
             Console.WriteLine($"O Meu Resultado é: {v1 + v2}");
             System.Console.WriteLine("---------");
             System.Console.WriteLine("Deseja fazer outra operação? S/N");
-            char repeticao = Convert.ToChar(Console.ReadLine());
-            if (repeticao == 's' || repeticao == 'S')
+            char repeticao = Convert.ToChar(Console.ReadLine().ToLower());
+            if (repeticao == 's')
                 Menu();
             else
             {
@@ -85,8 +85,8 @@ namespace Calculator
             Console.WriteLine($"O Resultado da subtração é : {v1 - v2}");
             System.Console.WriteLine("---------");
             System.Console.WriteLine("Deseja fazer outra operação? Y/F");
-            char repeticao = Convert.ToChar(Console.ReadLine());
-            if (repeticao == 's' || repeticao == 'S')
+            char repeticao = Convert.ToChar(Console.ReadLine().ToLower());
+            if (repeticao == 's')
                 Menu();
             else
                 Console.ReadKey();
@@ -118,8 +118,8 @@ namespace Calculator
             System.Console.WriteLine($"O resultado da multiplicação é: {v1 * v2}");
             System.Console.WriteLine("---------");
             System.Console.WriteLine("Deseja fazer outra operação? Y/F");
-            char repeticao = Convert.ToChar(Console.ReadLine());
-            if (repeticao == 's' || repeticao == 'S')
+            char repeticao = Convert.ToChar(Console.ReadLine().ToLower());
+            if (repeticao == 's')
                 Menu();
             else
                 Console.ReadKey();
