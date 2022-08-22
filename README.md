@@ -7,7 +7,7 @@
 
 * obs: precisar ter instalado o dotnet 5 instalado e sdks 3.1.
 COMANDO:
-Verificar quais sdks você tem instalados:
+ - Verificar quais sdks você tem instalados:
 dotnet --list-sdks
 Caso tenha o 3.1 é só prosseguir com o comando abaixo.
 dotnet new console -n Calculator -o Calculator -f netcoreapp3.1
